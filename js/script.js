@@ -161,4 +161,76 @@ document.addEventListener('DOMContentLoaded', function() {
             link.classList.add('active');
         }
     });
+
+    // WhatsApp Booking Function
+    window.sendWhatsAppBooking = function(event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const formData = new FormData(form);
+
+        // Build WhatsApp message
+        let message = "🧴 *GLORY MAKEUP STUDIO - BOOKING REQUEST* 🧴\n\n";
+
+        message += "👤 *Name:* " + (formData.get('name') || 'Not provided') + "\n";
+        message += "📞 *Phone:* " + (formData.get('phone') || 'Not provided') + "\n";
+        message += "📧 *Email:* " + (formData.get('email') || 'Not provided') + "\n";
+        message += "💄 *Service:* " + (formData.get('service') || 'Not specified') + "\n";
+        message += "📅 *Date:* " + (formData.get('date') || 'Not specified') + "\n";
+        message += "⏰ *Time:* " + (formData.get('time') || 'Not specified') + "\n";
+        message += "📍 *Location:* " + (formData.get('location') || 'Not specified') + "\n";
+
+        if (formData.get('requirements')) {
+            message += "\n💡 *Special Requirements:*\n" + formData.get('requirements') + "\n";
+        }
+
+        if (formData.get('hear-about')) {
+            message += "\n📢 *How they heard about us:* " + formData.get('hear-about') + "\n";
+        }
+
+        message += "\n✅ *Please confirm availability and pricing.*\n";
+        message += "📱 *Contact:* +91 70651 36300";
+
+        // Encode message for WhatsApp URL
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/917065136300?text=${encodedMessage}`;
+
+        // Open WhatsApp
+        window.open(whatsappUrl, '_blank');
+
+        // Show success message
+        alert('Opening WhatsApp with your booking details. Please send the message to complete your booking request!');
+
+        return false;
+    };
+
+    // Email Contact Function
+    window.sendEmailContact = function(event) {
+        event.preventDefault();
+
+        const form = event.target;
+        const formData = new FormData(form);
+
+        // Build email content
+        const subject = encodeURIComponent("Glory Makeup Studio - " + (formData.get('subject') || 'Contact Inquiry'));
+        const body = encodeURIComponent(
+            "Hello Glory Makeup Studio,\n\n" +
+            "Name: " + (formData.get('name') || 'Not provided') + "\n" +
+            "Email: " + (formData.get('email') || 'Not provided') + "\n" +
+            "Phone: " + (formData.get('phone') || 'Not provided') + "\n\n" +
+            "Message:\n" + (formData.get('message') || 'No message provided') + "\n\n" +
+            "Best regards,\n" + (formData.get('name') || 'Customer')
+        );
+
+        // Create mailto link
+        const mailtoUrl = `mailto:awasthigarima70@gmail.com?subject=${subject}&body=${body}`;
+
+        // Open email client
+        window.location.href = mailtoUrl;
+
+        // Show success message
+        alert('Opening your email client with the message. Please send the email to complete your inquiry!');
+
+        return false;
+    };
 });

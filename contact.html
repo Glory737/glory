@@ -104,7 +104,7 @@
         <section class="contact-form-section">
             <div class="container">
                 <h2>Send us a Message</h2>
-                <form action="https://formspree.io/f/[YourFormspreeID]" method="POST" class="contact-form">
+                <form id="contactForm" onsubmit="sendEmailContact(event)">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="contact-name">Name *</label>

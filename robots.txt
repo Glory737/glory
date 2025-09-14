@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://silly-pie-96e665.netlify.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow all important pages
+Allow: /index.html
+Allow: /services.html
+Allow: /gallery.html
+Allow: /booking.html
+Allow: /about.html
+Allow: /contact.html
+
+# Block access to sensitive directories (if any)
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/

@@ -710,16 +710,6 @@ th {
     transform: translateY(-2px);
 }
 
-/* Calendly Embed */
-.calendly-embed {
-    margin-top: 2rem;
-}
-
-.calendly-embed iframe {
-    border: none;
-    border-radius: var(--border-radius);
-}
-
 /* About Page */
 .about-hero {
     background-color: var(--white);

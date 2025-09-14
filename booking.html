@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now - Glory Makeup Studio</title>
+    <meta name="description" content="Book your makeup session with Glory Makeup Studio. Easy online booking for bridal, party, photoshoot makeup and lessons.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Glory <span>Makeup Studio</span></h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="booking.html">Book Now</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Book Your Session</h1>
+                <p>Reserve your spot for professional makeup services</p>
+            </div>
+        </section>
+
+        <section class="booking-section">
+            <div class="container">
+                <div class="booking-content">
+                    <div class="booking-info">
+                        <h2>Ready to Book?</h2>
+                        <p>Fill out the form below to schedule your makeup session. We'll get back to you within 24 hours to confirm your appointment.</p>
+                        <div class="booking-features">
+                            <div class="feature">
+                                <h3>📅 Easy Scheduling</h3>
+                                <p>Choose your preferred date and time</p>
+                            </div>
+                            <div class="feature">
+                                <h3>💬 Direct Communication</h3>
+                                <p>Personal consultation to discuss your vision</p>
+                            </div>
+                            <div class="feature">
+                                <h3>✅ Confirmation</h3>
+                                <p>Instant confirmation and reminder</p>
+                            </div>
+                        </div>
+                        <div class="alternative-booking">
+                            <h3>Alternative Booking Methods</h3>
+                            <p>Prefer to book via WhatsApp or phone?</p>
+                            <a href="https://wa.me/917065136300?text=Hi%20Glory,%20I%20would%20like%20to%20book%20a%20makeup%20session" class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                                Book via WhatsApp
+                            </a>
+                            <p>Or call us at: <a href="tel:07065136300">070651 36300</a></p>
+                        </div>
+                    </div>
+
+                    <div class="booking-form">
+                        <form action="https://formspree.io/f/[YourFormspreeID]" method="POST">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service">Service Type *</label>
+                                <select id="service" name="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="bridal">Bridal Makeup (₹8,000 - ₹15,000)</option>
+                                    <option value="party">Party/Event Makeup (₹3,000 - ₹6,000)</option>
+                                    <option value="photoshoot">Photoshoot Makeup (₹4,000 - ₹8,000)</option>
+                                    <option value="lesson">Makeup Lesson (₹2,000 - ₹4,000)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preferred-date">Preferred Date *</label>
+                                <input type="date" id="preferred-date" name="preferred-date" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="preferred-time">Preferred Time *</label>
+                                <select id="preferred-time" name="preferred-time" required>
+                                    <option value="">Select time</option>
+                                    <option value="morning">Morning (9 AM - 12 PM)</option>
+                                    <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                                    <option value="evening">Evening (5 PM - 9 PM)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="requirements">Special Requirements</label>
+                                <textarea id="requirements" name="requirements" rows="4" placeholder="Any specific looks, allergies, or additional information..."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="hear-about">How did you hear about us?</label>
+                                <select id="hear-about" name="hear-about">
+                                    <option value="">Select option</option>
+                                    <option value="instagram">Instagram</option>
+                                    <option value="facebook">Facebook</option>
+                                    <option value="google">Google Search</option>
+                                    <option value="referral">Friend/Family Referral</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Send Booking Request</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="calendar-section">
+            <div class="container">
+                <h2>Check Availability</h2>
+                <p>Use our calendar to see available time slots and book directly.</p>
+                <div class="calendly-embed">
+                    <!-- Replace with your actual Calendly embed code -->
+                    <iframe src="https://calendly.com/glory-makeup-studio" width="100%" height="600" frameborder="0" title="Calendly booking calendar"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Glory Makeup Studio</h3>
+                    <p>Professional makeup services for your special moments.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📞 [Your Phone]</p>
+                    <p>📧 awasthigarima70@gmail.com</p>
+                    <p>📍 [Your City], India</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://instagram.com/glorymakeupstudio" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://facebook.com/glorymakeupstudio" target="_blank" rel="noopener noreferrer">Facebook</a>
+                        <a href="https://wa.me/917065136300?text=Hi%20Glory,%20I%20would%20like%20to%20book%20a%20makeup%20session" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Glory Makeup Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
